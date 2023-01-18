@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 
 import '../../resource/app_theme.dart';
 import '../../widgets/dimentions.dart';
+import '../pages/course_fields/courses_screen.dart';
 import '../pages/home_screen.dart';
-import '../pages/courses_screen.dart';
 import '../pages/my_courses_screen.dart';
 import '../pages/profile_Screen.dart';
 

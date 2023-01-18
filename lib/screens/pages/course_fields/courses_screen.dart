@@ -2,11 +2,11 @@ import 'package:erpl_learnpress/routers/my_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../resource/app_theme.dart';
-import '../../widgets/add_text.dart';
-import '../../widgets/common_appbar.dart';
-import '../../widgets/common_searchfield.dart';
-import '../../widgets/dimentions.dart';
+
+import '../../../resource/app_theme.dart';
+import '../../../widgets/add_text.dart';
+import '../../../widgets/common_appbar.dart';
+import '../../../widgets/dimentions.dart';
 
 class CoursesScreen extends StatelessWidget {
   const CoursesScreen({Key? key}) : super(key: key);
@@ -33,9 +33,9 @@ class CoursesScreen extends StatelessWidget {
               SizedBox(
                 height: AddSize.size10,
               ),
-              SearchField(
-                title: 'Search for Course',
-              ),
+              // SearchField(
+              //   title: 'Search for Course',
+              // ),
               SizedBox(
                 height: AddSize.size10,
               ),
@@ -89,7 +89,7 @@ class CoursesScreen extends StatelessWidget {
                     itemBuilder: (BuildContext context, int index) {
                       return InkWell(
                         onTap: () {
-                          Get.toNamed(MyRouter.singleCourse);
+                          // Get.toNamed(MyRouter.singleCourse);
                         },
                         child: Container(
                             decoration: BoxDecoration(

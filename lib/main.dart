@@ -1,5 +1,6 @@
 import 'package:erpl_learnpress/resource/app_theme.dart';
 import 'package:erpl_learnpress/routers/my_router.dart';
+import 'package:erpl_learnpress/screens/profile/edit_profile.dart';
 import 'package:erpl_learnpress/screens/userflow/forgot_password/forgot_password_otp.dart';
 import 'package:erpl_learnpress/screens/userflow/login_Screen.dart';
 import 'package:erpl_learnpress/screens/userflow/signup_screen.dart';
@@ -21,8 +22,8 @@ class MyApp extends StatelessWidget {
       darkTheme: ThemeData.light(),
       defaultTransition: Transition.rightToLeft,
       debugShowCheckedModeBanner: false,
-      initialRoute: "/splash",
-      //home: ForgotPasswordOtp(),
+      // initialRoute: "/splash",
+      home: EditProfileScreen(),
       getPages: MyRouter.route,
       theme: ThemeData(
           fontFamily: 'Raleway',
