@@ -6,19 +6,20 @@ import 'dimentions.dart';
 class CommonButton extends StatelessWidget {
   String buttonText;
   VoidCallback function;
+  final bool? expended;
   Color? BgColor;
   double buttonWidth; // add this
   double buttonHeight; // add this
   CommonButton(
       this.buttonText, this.function, this.buttonWidth, this.buttonHeight,
-      {super.key}); // change this
+      {super.key, this.expended = false}); // change this
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10.0),
-          color: AppTheme.primaryColor),
+          color: expended! ? AppTheme.primaryColor : Colors.black),
       child: MaterialButton(
         minWidth: buttonWidth * .3,
         color: BgColor,
@@ -27,7 +28,7 @@ class CommonButton extends StatelessWidget {
         onPressed: function, // add this here
         child: Text(buttonText,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: AddSize.font20)
+            style: TextStyle(fontSize: AddSize.font18)
                 .copyWith(color: Colors.white, fontWeight: FontWeight.bold)),
       ),
     );

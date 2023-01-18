@@ -58,19 +58,24 @@ class OnBoardingScreen extends StatelessWidget {
                     ),
                     Positioned(
                         top: AddSize.size50,
-                        left: AddSize.padding16,
+                        left: AddSize.screenWidth * .8,
                         child: controller.currentIndex.value != 2
-                            ? const Text("Skip",
-                                style: TextStyle(
-                                    color: Colors.transparent,
-                                    decorationColor: Colors.white,
-                                    shadows: [
-                                      Shadow(
-                                          color: Colors.white,
-                                          offset: Offset(0, -10))
-                                    ],
-                                    decoration: TextDecoration.underline,
-                                    decorationThickness: 3))
+                            ? InkWell(
+                                onTap: () {
+                                  Get.toNamed(MyRouter.loginScreen);
+                                },
+                                child: const Text("Skip",
+                                    style: TextStyle(
+                                        color: Colors.transparent,
+                                        decorationColor: Colors.white,
+                                        shadows: [
+                                          Shadow(
+                                              color: Colors.white,
+                                              offset: Offset(0, -10))
+                                        ],
+                                        decoration: TextDecoration.underline,
+                                        decorationThickness: 3)),
+                              )
                             : const SizedBox())
                   ],
                 ),
@@ -92,6 +97,7 @@ class OnBoardingScreen extends StatelessWidget {
                     children: [
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.start,
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           SizedBox(height: AddSize.size10),
@@ -100,28 +106,28 @@ class OnBoardingScreen extends StatelessWidget {
                               controller
                                   .contents[controller.currentIndex.value].title
                                   .toString(),
-                              textAlign: TextAlign.center,
+                              textAlign: TextAlign.start,
                               style: TextStyle(
                                 fontSize: AddSize.font10 * 3,
-                                fontWeight: FontWeight.w700,
+                                fontWeight: FontWeight.bold,
                                 // height: 0.44,
                                 color: AppTheme.headingColor,
                               ),
                             ),
                           ),
-                          SizedBox(height: AddSize.size25),
+                          SizedBox(height: AddSize.size10),
                           Text(
                             controller.contents[controller.currentIndex.value]
                                 .discription
                                 .toString(),
                             style: TextStyle(
-                              height: 1.30,
+                              height: 1.60,
                               fontWeight: FontWeight.w300,
                               fontSize: AddSize.font16,
                               color: AppTheme.mainTextColor,
                             ),
                           ),
-                          SizedBox(height: AddSize.size80),
+                          SizedBox(height: AddSize.size50),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
@@ -180,13 +186,14 @@ class OnBoardingScreen extends StatelessWidget {
 
   Container buildDot(int index, BuildContext context) {
     return Container(
-      height: AddSize.size10 * .6,
+      height: AddSize.size10 * .8,
       width: controller.currentIndex.value == index
-          ? AddSize.size30
+          ? AddSize.size15
           : AddSize.size10,
       margin: const EdgeInsets.only(right: 5),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        // shape: BoxShape.circle,
+        borderRadius: BorderRadius.circular(5),
         color: controller.currentIndex.value == index
             ? AppTheme.primaryColor
             : Colors.grey.shade300,

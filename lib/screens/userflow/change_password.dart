@@ -23,7 +23,9 @@ class _ChangePasswordState extends State<ChangePassword> {
           BorderSide(width: 0.6, color: AppTheme.subText.withOpacity(.3)),
       borderRadius: BorderRadius.circular(AddSize.size10));
 
-  final TextEditingController emailController = TextEditingController();
+  final TextEditingController oldPassword = TextEditingController();
+  final TextEditingController newPassword = TextEditingController();
+  final TextEditingController confirmPassword = TextEditingController();
 
   final maintext = "Not remember your old password?";
 
@@ -57,7 +59,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       height: AddSize.size20,
                     ),
                     AddText(
-                      text: 'Change Password',
+                      text: 'Change Your Password',
                       textAlign: TextAlign.center,
                       color: AppTheme.userText,
                       fontWeight: FontWeight.w500,
@@ -80,7 +82,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       height: AddSize.size10,
                     ),
                     CommonTextFieldWidget(
-                      controller: emailController,
+                      controller: oldPassword,
                       hint: 'Old password',
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
@@ -104,7 +106,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       height: AddSize.size10,
                     ),
                     CommonTextFieldWidget(
-                      controller: emailController,
+                      controller: newPassword,
                       hint: 'New password',
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
@@ -128,7 +130,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                       height: AddSize.size10,
                     ),
                     CommonTextFieldWidget(
-                      controller: emailController,
+                      controller: confirmPassword,
                       hint: 'Confirm New password',
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
@@ -144,7 +146,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                     Center(
                       child: CommonButton('Save Password', () {
                         // Get.toNamed(MyRouter.forgotOtp);
-                      }, deviceWidth, AddSize.size50),
+                      }, deviceWidth, expended: true, AddSize.size50),
                     ),
                     SizedBox(
                       height: AddSize.size10,

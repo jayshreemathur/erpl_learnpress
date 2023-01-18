@@ -79,7 +79,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                       fontSize: AddSize.font24,
                     ),
                     SizedBox(
-                      height: AddSize.size20,
+                      height: AddSize.size10,
                     ),
                     AddText(
                       text: maintext,
@@ -120,7 +120,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     // ),
                     CommonTextFieldWidget(
                       controller: emailController,
-                      hint: 'Repeat your password',
+                      hint: 'Enter your register mail',
                       keyboardType: TextInputType.emailAddress,
                       textInputAction: TextInputAction.next,
                       bgColor: AppTheme.textfield.withOpacity(0.5),
@@ -135,7 +135,7 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                     Center(
                       child: CommonButton('Send OTP', () {
                         Get.toNamed(MyRouter.forgotOtp);
-                      }, deviceWidth, AddSize.size50),
+                      }, deviceWidth, expended: true, AddSize.size50),
                     ),
                     SizedBox(
                       height: AddSize.size20,

@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../../resource/app_theme.dart';
 import '../../widgets/dimentions.dart';
 import '../pages/home_screen.dart';
-import '../pages/courses_screen.dart';
+import '../pages/course_fields/courses_screen.dart';
 import '../pages/my_courses_screen.dart';
 import '../pages/profile_Screen.dart';
 
@@ -56,9 +56,9 @@ class _BottomNavbarState extends State<BottomNavbar> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         shape: const CircularNotchedRectangle(),
-        notchMargin: 8,
+        notchMargin: 6,
         child: Container(
-          height: AddSize.size80,
+          height: 80,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -66,7 +66,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
-                    minWidth: AddSize.size40,
+                    minWidth: AddSize.size20,
                     onPressed: () {
                       setState(() {
                         currentScreen = CoursesScreen();
@@ -97,7 +97,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                     ),
                   ),
                   MaterialButton(
-                    minWidth: AddSize.size30,
+                    minWidth: AddSize.size20,
                     onPressed: () {
                       setState(() {
                         currentScreen = MyCoursesScreen();
@@ -106,9 +106,10 @@ class _BottomNavbarState extends State<BottomNavbar> {
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      // crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: AddSize.size25,
+                          height: AddSize.size22,
                           child: Image.asset(
                             fit: BoxFit.contain,
                             'assets/icons/courses.png',
@@ -134,7 +135,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   MaterialButton(
-                    // minWidth: AddSize.size30,
+                    minWidth: AddSize.size20,
                     onPressed: () {
                       setState(() {
                         currentScreen = ChatScreen();
@@ -145,7 +146,7 @@ class _BottomNavbarState extends State<BottomNavbar> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
-                          height: AddSize.size25,
+                          height: AddSize.size22,
                           child: Image.asset(
                             fit: BoxFit.contain,
                             'assets/icons/chat.png',

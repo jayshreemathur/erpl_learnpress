@@ -51,13 +51,13 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         Positioned(
           top: screenSize.width * 0.75,
-          left: screenSize.width * 0.30,
+          left: screenSize.width * 0.35,
           child: Column(
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 10),
-                height: screenSize.width * 0.40,
-                width: screenSize.width * 0.40,
+                height: screenSize.width * 0.30,
+                width: screenSize.width * 0.30,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage("assets/images/logo.png"),
@@ -68,10 +68,10 @@ class _SplashScreenState extends State<SplashScreen> {
               Container(
                 margin: const EdgeInsets.only(top: 10),
                 height: screenSize.width * 0.10,
-                width: screenSize.width * 0.40,
+                width: screenSize.width * 0.30,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/text.png"),
+                    image: AssetImage("assets/images/textmain.png"),
                     fit: BoxFit.fill,
                   ),
                 ),

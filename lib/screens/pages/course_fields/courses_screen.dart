@@ -2,11 +2,11 @@ import 'package:erpl_learnpress/routers/my_router.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../resource/app_theme.dart';
-import '../../widgets/add_text.dart';
-import '../../widgets/common_appbar.dart';
-import '../../widgets/common_searchfield.dart';
-import '../../widgets/dimentions.dart';
+import '../../../resource/app_theme.dart';
+import '../../../widgets/add_text.dart';
+import '../../../widgets/common_appbar.dart';
+import '../../../widgets/common_searchfield.dart';
+import '../../../widgets/dimentions.dart';
 
 class CoursesScreen extends StatelessWidget {
   const CoursesScreen({Key? key}) : super(key: key);
@@ -34,8 +34,10 @@ class CoursesScreen extends StatelessWidget {
                 height: AddSize.size10,
               ),
               SearchField(
-                title: 'Search for Course',
-              ),
+                  title: 'Search for Course',
+                  onPressed: () {
+                    Get.toNamed(MyRouter.searchedCourse);
+                  }),
               SizedBox(
                 height: AddSize.size10,
               ),
@@ -48,18 +50,23 @@ class CoursesScreen extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     physics: BouncingScrollPhysics(),
                     itemBuilder: (BuildContext context, int index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                            boxShadow: blurBoxShadow,
-                            color: AppTheme.fiterchip,
-                            borderRadius: BorderRadius.circular(100),
-                            border: Border.all(color: AppTheme.primaryColor)),
-                        margin: EdgeInsets.all(AddSize.size5),
-                        padding: EdgeInsets.symmetric(
-                            horizontal: AddSize.size10,
-                            vertical: AddSize.padding18),
-                        child: AddText(
-                          text: "Mobile App Design",
+                      return InkWell(
+                        onTap: () {
+                          Get.toNamed(MyRouter.selectedCourse);
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              boxShadow: blurBoxShadow,
+                              color: AppTheme.whitebg,
+                              borderRadius: BorderRadius.circular(100),
+                              border: Border.all(color: AppTheme.primaryColor)),
+                          margin: EdgeInsets.all(AddSize.size5),
+                          padding: EdgeInsets.symmetric(
+                              horizontal: AddSize.size10,
+                              vertical: AddSize.padding18),
+                          child: AddText(
+                            text: "Mobile App Design",
+                          ),
                         ),
                       );
                     }),
@@ -73,7 +80,7 @@ class CoursesScreen extends StatelessWidget {
                   text: 'All Course',
                   fontSize: AddSize.font18,
                   color: AppTheme.userText,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
               SizedBox(
@@ -160,7 +167,7 @@ class CoursesScreen extends StatelessWidget {
                                         textAlign: TextAlign.start,
                                         color:
                                             AppTheme.filtter.withOpacity(0.8),
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight: FontWeight.bold,
                                         fontSize: AddSize.font18,
                                       ),
                                       Row(

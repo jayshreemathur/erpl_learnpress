@@ -80,7 +80,7 @@ class _ForgotPasswordOtpState extends State<ForgotPasswordOtp> {
                       fontSize: AddSize.font24,
                     ),
                     SizedBox(
-                      height: AddSize.size20,
+                      height: AddSize.size10,
                     ),
                     AddText(
                       text: maintext,
@@ -153,10 +153,10 @@ class _ForgotPasswordOtpState extends State<ForgotPasswordOtp> {
                         fieldBorderStyle: FieldBorderStyle.square,
                         // padding: EdgeInsets.all(AddSize.size10),
                         switchInAnimationCurve: Curves.bounceIn,
-                        margin: EdgeInsets.all(AddSize.size15),
+                        margin: EdgeInsets.all(AddSize.size10),
                         responsive: false,
                         fieldHeight: AddSize.size50,
-                        fieldWidth: AddSize.size50,
+                        fieldWidth: AddSize.screenWidth / 8,
                         borderWidth: 1.0,
                         activeBorderColor: AppTheme.primaryColor,
                         // activeBackgroundColor: Colors.pink.shade100,
@@ -181,7 +181,7 @@ class _ForgotPasswordOtpState extends State<ForgotPasswordOtp> {
                     Center(
                       child: CommonButton('Verify', () {
                         Get.toNamed(MyRouter.resetPassword);
-                      }, deviceWidth, 40),
+                      }, deviceWidth, expended: true, 40),
                     ),
                     SizedBox(
                       height: AddSize.size20,

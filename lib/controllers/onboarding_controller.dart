@@ -13,12 +13,12 @@ class OnBoardingController extends GetxController {
             "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."),
     UnbordingContent(
         image: 'assets/images/onboarding2.png',
-        title: "Communicate with a tutor.",
+        title: "Communicate with \na tutor.",
         discription:
             "It is a long established fact that a reader will be distracted by the readable."),
     UnbordingContent(
         image: 'assets/images/onboarding3.png',
-        title: "Stay safe, Learn at home!",
+        title: "Stay safe, \nLearn at home!",
         discription:
             "It is a long established fact that a reader will be distracted by the readable."),
   ].obs;

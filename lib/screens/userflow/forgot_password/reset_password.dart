@@ -79,7 +79,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                       fontSize: AddSize.font24,
                     ),
                     SizedBox(
-                      height: AddSize.size20,
+                      height: AddSize.size10,
                     ),
                     AddText(
                       text: maintext,
@@ -142,7 +142,7 @@ class _ResetPasswordState extends State<ResetPassword> {
                     Center(
                       child: CommonButton('Save Password', () {
                         Get.toNamed(MyRouter.changePassword);
-                      }, deviceWidth, AddSize.size50),
+                      }, deviceWidth, expended: true, AddSize.size50),
                     ),
                     SizedBox(
                       height: AddSize.size20,

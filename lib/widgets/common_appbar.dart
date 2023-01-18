@@ -80,7 +80,7 @@ class CustomAppbar extends StatelessWidget {
                 padding: EdgeInsets.only(left: AddSize.padding14),
                 child: const Icon(
                   Icons.arrow_back,
-                  color: Colors.black,
+                  color: AppTheme.primaryColor,
                 ),
               )),
       title: Container(

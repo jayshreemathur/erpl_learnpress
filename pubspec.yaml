@@ -23,7 +23,11 @@ dependencies:
   form_field_validator:
   cached_network_image:
   flutter_pin_code_fields: ^1.1.0
-  motion_tab_bar_v2: ^0.2.6
+  percent_indicator:
+  file_picker:
+  image_picker:
+  date_time_picker: ^2.1.0
+  intl: ^0.17.0
 
 
 dev_dependencies:
@@ -45,8 +49,6 @@ flutter:
     - family: Poppins
       fonts:
         - asset: assets/fonts/Poppins-Regular.ttf
-        - asset: assets/fonts/Poppins-semiBold.ttf
-        - asset: assets/fonts/Poppins-Medium.ttf
           style: normal
           weight: 500
 

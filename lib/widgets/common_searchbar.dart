@@ -5,7 +5,8 @@ import 'dimentions.dart';
 
 class SearchBar extends StatelessWidget {
   final String? title;
-  const SearchBar({Key? key, this.title}) : super(key: key);
+  final GestureTapCallback? onPressed;
+  const SearchBar({Key? key, this.title, this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +30,12 @@ class SearchBar extends StatelessWidget {
             //     Icon(Icons.search, color: Theme.of(context).iconTheme.color),
           ),
           GestureDetector(
-            onTap: () {},
-            child: Icon(
-              Icons.search_rounded,
-              color: AppTheme.userText.withOpacity(.4),
+            onTap: onPressed,
+            child: Image.asset(
+              'assets/icons/search.png',
+              width: AddSize.size20,
+              height: AddSize.size20,
+              fit: BoxFit.cover,
             ),
           ),
           SizedBox(
