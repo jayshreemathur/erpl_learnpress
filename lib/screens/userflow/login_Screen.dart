@@ -112,7 +112,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                             children: [
-                              Container(decoration: BoxDecoration(
+                              Container(
+                                padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+
+                                decoration: BoxDecoration(
 
                                 borderRadius: BorderRadius.all(Radius.circular(5))
                                   ,
@@ -121,7 +124,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: Text("Visit",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 16),),
                               ),
 
-                              Container(decoration: BoxDecoration(
+                              Container(
+                                padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+
+                                decoration: BoxDecoration(
+
 
                                   borderRadius: BorderRadius.all(Radius.circular(5))
                                   ,
