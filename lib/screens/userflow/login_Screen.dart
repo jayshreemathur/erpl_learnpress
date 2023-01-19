@@ -107,6 +107,30 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
+                          Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+                            children: [
+                              Container(decoration: BoxDecoration(
+
+                                borderRadius: BorderRadius.all(Radius.circular(5))
+                                  ,
+                                border: Border.all(width: 1.5,color: Colors.green)
+                              ),
+                              child: Text("Visit",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 16),),
+                              ),
+
+                              Container(decoration: BoxDecoration(
+
+                                  borderRadius: BorderRadius.all(Radius.circular(5))
+                                  ,
+                                  border: Border.all(width: 1.5,color: Colors.green)
+                              ),
+                                child: Text("Help",style: TextStyle(color: Colors.black,fontWeight: FontWeight.w500,fontSize: 16),),
+                              ),
+                            ],
+                          ),
                           SizedBox(
                             height: AddSize.size20,
                           ),
